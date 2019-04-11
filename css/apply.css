@@ -1,0 +1,40 @@
+
+body{
+background:#f1f1f1 !important;
+}
+select{
+	border:none !important;
+	background:#fff;
+}
+.navbar{
+	margin-bottom:0 !important;
+}
+.navbar-header h4,.navbar-collapse h4{
+	text-align:center;
+	padding-top: 5px;
+}
+.navbar-toggle,.navbar-default {
+	border: none !important;
+}
+.my_input{
+	width:100%;
+	border:none;
+}
+.my_input:focus{
+	outline:none !important;
+}
+.my_table{
+	border-top:none !important;
+	background:#fff;
+}
+.my_table tr:first-child td,tr:first-child th{
+	border-top:none !important;
+}
+.pull-right{
+	text-align: right;
+}
+
+
+
+
+

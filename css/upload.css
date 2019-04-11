@@ -1,0 +1,50 @@
+.navbar{
+	text-align:center !important;
+	margin:0 auto;
+}
+.navbar-header h4,.p{
+	text-align:center;
+	padding-top: 5px;
+}
+.navbar-toggle,.navbar-default {
+	border: none !important;
+}
+.my_table{
+	border:1px solid #ddd;
+}
+.my_table tr td{
+	text-align: center ;
+}
+.upWrap{
+	position: relative;
+	height: 150px;
+}
+.upWrap > .fileWrap,.upWrap > .fileWrap > input[type=file],.upWrap > .imgWrap{
+	position: absolute;
+	height: 100%;
+	width:100%;
+	top:0;
+	left:0;
+}
+.upWrap > .fileWrap > input[type=file]{
+	z-index: 2;
+	opacity: 0;
+}
+.upWrap > .imgWrap{
+	z-index: 1;
+}
+.upWrap > .imgWrap >.imgOnloadWrap1> img,.upWrap > .imgWrap >.imgOnloadWrap2> img{
+	width:300px;
+	height: 150px;
+}
+.upedImg{
+	z-index: 3 !important;
+}
+.require{
+	border-top:1px solid #ccc;
+}
+.require img{
+	margin:15px auto;
+}
+
+

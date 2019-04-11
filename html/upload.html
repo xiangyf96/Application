@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> 中国工商银行 </title>
+
+    <!-- Bootstrap -->
+    <link href="../css/upload.css" rel="stylesheet">
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../kartik-v-bootstrap-fileinput-9d72340/css/fileinput.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="../kartik-v-bootstrap-fileinput-9d72340/js/fileinput.min.js"></script>
+    <script src="../kartik-v-bootstrap-fileinput-9d72340/js/locales/zh.js"></script>
+    
+  </head>
+
+  <body>
+
+
+      <div class="navbar navbar-default">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed sr-only" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                
+                </button>
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
+              <h4 class="visible-xs-block">中国工商银行</h4>
+              </div>
+
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <h4 class="p">中国工商银行</h4>
+              </div>
+        </div>
+
+
+    <div class="container">
+      <h5 class="p">请上传本人身份证照片</h5>
+        <table class="table my_table">
+            <tr> <td >
+               <form action="" enctype="multipart/form-data">
+              <div class="upImg clearFlex">
+               
+                <div class="upWrap">
+                  <div class="fileWrap">
+                    <input type="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" onchange="upImg1(this)"/>
+                  </div>
+                  <div class="imgWrap"> 
+                    <div class="imgOnloadWrap1">
+                    <img src="../pic/background3.jpg" alt="" />
+                  </div>
+                </div>
+                </div>
+              </div>
+            </form> 
+          </td>  </tr>
+
+            <tr>  <td >
+                <form action="" enctype="multipart/form-data">
+                  <div class="upImg ">
+                    
+                    <div class="upWrap">
+                      <div class="fileWrap">
+                        <input type="file" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg" onchange="upImg2(this)"/>
+                      </div>
+                      <div class="imgWrap">
+                        <div class="imgOnloadWrap2">
+                        <img src="../pic/background4.jpg" alt="" />
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </form>
+            </td>  </tr>
+           
+          </table>
+
+         <div class="row">
+           <p class="col-xs-6">请拍摄身份证原件：</p> <p class="col-xs-6"><a href="#" class="pull-right">上传证件照片要求</a></p>
+         </div>
+        <div class="require row">
+          <img src="../pic/11.jpg" class="col-xs-3"/>
+          <img src="../pic/12.jpg" class="col-xs-3"/>
+          <img src="../pic/13.jpg" class="col-xs-3"/>
+          <img src="../pic/14.jpg" class="col-xs-3"/>
+        </div>
+
+          <div class="container-fluid">
+          <button class="btn btn-primary btn-block">下一步</button>
+         </div>
+
+
+
+
+        
+    </div>
+ 
+    <script type="text/javascript">
+   /*----上传图片----*/
+function upImg1(obj){
+ 
+  
+	var imgFile = obj.files[0];
+	var img = new Image();
+
+	var fr = new FileReader();
+	fr.onload = function(){
+		var htmlStr ='<img src="'+fr.result+'" alt="" />';
+		htmlStr += '</div>';
+    htmlStr += '</div>';
+    $('.imgOnloadWrap1').empty();
+		$('.imgOnloadWrap1').append(htmlStr);
+		obj.value = '';
+	}
+	fr.readAsDataURL(imgFile);
+}
+
+function upImg2(obj){
+
+	var imgFile = obj.files[0];
+
+	var img = new Image();
+	var fr = new FileReader();
+	fr.onload = function(){
+		var htmlStr = '<img src="'+fr.result+'" alt="" />';
+		htmlStr += '</div>';
+    htmlStr += '</div>';
+    $('.imgOnloadWrap2').empty();
+		$('.imgOnloadWrap2').append(htmlStr);
+		obj.value = '';
+	}
+	fr.readAsDataURL(imgFile);
+}
+
+    </script>
+
+  </body>
+  </html>
